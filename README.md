@@ -5,13 +5,11 @@ material you upload (PDF and Word `.docx` files) — no outside knowledge,
 no hallucinated citations, and a clear "not covered" answer when the
 material doesn't address the question.
 
-Built the same way as the [ChemALLM](https://github.com/Global-Product-Compliance-Europe-AB/ChemALLM)
-project: a local Ollama server running a general open-source LLM
+It runs on a local Ollama server serving a general open-source LLM
 (Llama, Mistral, Qwen, Gemma, ...) for generation, so no student data or
-course content leaves the machine this runs on. The retrieval side is
-swapped from ChemALLM's SQL lookups (structured compound database) to a
-proper document RAG pipeline, since course material is PDFs and Word
-docs rather than structured records.
+course content leaves the machine this runs on. Retrieval is a proper
+document RAG pipeline built for unstructured course material — extract
+text, chunk it, embed it locally, and search it with a vector index.
 
 ## How it works
 
